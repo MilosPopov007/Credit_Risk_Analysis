@@ -14,7 +14,7 @@ Once we have designed and implemented these algorithms, our analysis will evalua
 
 ## Results:
 
-Use of Resampling Models to Predict Credit Risk
+[Use of Resampling Models to Predict Credit Risk](https://github.com/MilosPopov007/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb)
   
 Using the Imbalanced-learn and Scikit-learn libraries, I will evaluate three machine learning models by using resampling to determine which is better at predicting credit risk.<br> First, I will use the oversampling RandomOverSampler and SMOTE algorithms, and then the undersampling ClusterCentroids algorithm. Using these algorithms, we will :
 * Resample the dataset (  credit card credit dataset from LendingClub )
