@@ -7,4 +7,19 @@ The company asked me to assist the lead data scientist in implementing this plan
 Once we have designed and implemented these algorithms, our analysis will evaluate their performance and see how well our models predict data.<br>
 
 
+
+
 ![This is an image](https://github.com/MilosPopov007/Credit_Risk_Analysis/blob/main/Resources/FRMP_Market_small.jpg)
+
+
+## Results:
+
+Use of Resampling Models to Predict Credit Risk
+  
+Using the Imbalanced-learn and Scikit-learn libraries, I will evaluate three machine learning models by using resampling to determine which is better at predicting credit risk. First, I will use the oversampling RandomOverSampler and SMOTE algorithms, and then the undersampling ClusterCentroids algorithm. Using these algorithms, we will :
+* Resample the dataset (  credit card credit dataset from LendingClub )
+* View the count of the target classes
+* Train a logistic regression classifier
+* Calculate the balanced accuracy score
+* Generate a confusion matrix
+* Generate a classification report
