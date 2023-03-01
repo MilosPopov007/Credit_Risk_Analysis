@@ -51,3 +51,24 @@ Overall, the Naive Random Oversampling algorithm may not be the most effective m
 SMOTE (Synthetic Minority Over-sampling Technique) is an oversampling algorithm that generates synthetic samples by randomly selecting a minority class instance and using its k-nearest neighbors to create similar, but slightly different, new instances. This technique is commonly used to address class imbalance in datasets. By generating synthetic samples, SMOTE is able to balance the class distribution while avoiding overfitting.
 
 The balanced accuracy score for the SMOTE Oversampling algorithm is 0.6463, which is slightly lower than the Naive Random Oversampling algorithm. This means that the SMOTE algorithm was not able to improve the accuracy score as much as the Naive Random Oversampling algorithm did.
+
+Confusion matrix
+True Positive (TP) = 55: The model correctly predicted that 55 loans are high-risk.
+False Positive (FP) = 32: The model incorrectly predicted that 32 loans are high-risk when they are actually low-risk.
+False Negative (FN) = 5812: The model incorrectly predicted that 5812 loans are low-risk when they are actually high-risk.
+True Negative (TN) = 11306: The model correctly predicted that 11306 loans are low-risk.
+
+Compared to the Naive Random Oversampling, the SMOTE Oversampling technique yielded slightly lower balanced accuracy score of 0.646. The confusion matrix shows that SMOTE correctly classified 11306 low risk loans and 55 high risk loans. However, it misclassified 32 high risk loans and 5812 low risk loans. The imbalanced classification report shows that the precision score for high risk loans is still low at 0.01, but the recall score improved to 0.63. The precision score for low risk loans is still high at 1.00, but the recall score decreased slightly to 0.66. Overall, the SMOTE Oversampling technique did not significantly improve the classification performance compared to the Naive Random Oversampling.
+
+##### Undersampling
+
+Undersampling is a technique that reduces the size of the majority class by randomly selecting a subset of the data points. This can help to balance the class distribution and improve model performance.
+
+The balanced accuracy score for the undersampled data is 0.5159904274991842.
+
+The confusion matrix for the Undersampling model shows that the model predicted 52 true positive high-risk loans and 7434 true negative low-risk loans, but misclassified 35 actual high-risk loans as low-risk and 9684 actual low-risk loans as high-risk. This means that the model has a high number of false negatives, indicating that it is not very good at identifying high-risk loans.
+
+The balanced accuracy score for the Undersampling algorithm is the lowest among the three oversampling and undersampling methods at 0.515, which indicates that this algorithm may not perform as well as the other two. The confusion matrix shows that there are only 87 true positives, and the model misclassified 35 high-risk loans as low-risk. Additionally, there are a significant number of false negatives, with the model predicting 9,684 low-risk loans as high-risk. This result indicates that the Undersampling algorithm may not be the best choice for this particular dataset.
+
+The imbalanced classification report shows that the precision for high-risk loans is only 0.01, indicating that when the model predicts a loan is high-risk, it is only correct 1% of the time. The recall is 0.60, meaning that the model only correctly identified 60% of the actual high-risk loans. The average f1 score is also low at 0.60, indicating that this algorithm has poor overall performance. Therefore, we should consider using another algorithm to better predict high-risk loans.
+
