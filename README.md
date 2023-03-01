@@ -79,3 +79,27 @@ Combination Sampling is a hybrid approach that combines both Over and Under Samp
 The balanced accuracy score for the Combination (Over and Under) Sampling using the SMOTEENN algorithm is 0.6451033596415952
 
 Compared to the results from the previous sampling methods, the combination sampling using the SMOTEENN algorithm shows a slightly lower balanced accuracy score of 0.6451. However, the precision and recall scores for detecting high-risk loans have improved compared to the other sampling methods, with a precision score of 0.01 and recall score of 0.68. The precision score for low-risk loans is 1.00, indicating that all of the predicted low-risk loans were correct. However, the recall score for low-risk loans is lower than the previous sampling methods at 0.61, indicating that there are more false negatives. Overall, the combination sampling method has its advantages and disadvantages and may be suitable depending on the specific needs of the analysis.
+
+### Use of Ensemble Classifiers to Predict Credit Risk
+
+Using the Imblearn.ensemble library, we will train and compare two different ensemble classifiers, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk and evaluate each model. We will repeat the steps created in previous models, but this time I will be using using BalancedRandomForestClassifier and EasyEnsembleClassifier.
+
+#### Balanced Random Forest Classifier 
+
+The Balanced Random Forest Classifier is an ensemble learning method that uses a combination of decision trees to improve classification performance on imbalanced datasets. The algorithm creates several decision trees, each with a randomly selected subset of the features and a randomly selected subset of the training data. The final classification decision is made by taking the average of the predicted probabilities from all the trees. It is an effective method for handling class imbalance and reducing overfitting.
+
+ The balanced accuracy score for the Balanced Random Forest Classifier is 0.7871246640962729.
+ 
+The Balanced Random Forest Classifier performed better than all the previous models. It has a high balanced accuracy score of 0.7871, indicating that it is able to effectively classify both high-risk and low-risk loans. The recall score for high-risk loans is also the highest among all the models, although still relatively low at 0.67. The precision score for high-risk loans is low at 0.04, indicating that there are still a high number of false positives. However, the F1 score for high-risk loans has improved compared to the previous models.
+
+#### Easy Ensemble AdaBoost Classifier
+
+The Easy Ensemble AdaBoost Classifier is an ensemble method that combines multiple weak learners to make more accurate predictions. In this algorithm, the weak learners are decision trees that are sequentially trained to correct the mistakes made by the previous tree. This approach creates a strong classifier that can better handle imbalanced datasets. The Easy Ensemble method takes this a step further by undersampling the majority class and boosting the minority class, which helps to further balance the dataset and improve model performance.
+
+The balanced accuracy score for the Easy Ensemble AdaBoost Classifier is 0.925427358175101. This indicates that the model performs well in predicting both classes, with a high degree of accuracy.
+
+Based on the results, the Easy Ensemble AdaBoost Classifier outperformed the Balanced Random Forest Classifier in terms of the balanced accuracy score (0.925 vs. 0.787). Additionally, the Easy Ensemble AdaBoost Classifier had higher precision, recall, F1 score, and geometric mean for both high-risk and low-risk categories, indicating overall better performance. Therefore, the Easy Ensemble AdaBoost Classifier is the recommended algorithm for this imbalanced classification problem.
+
+
+
+
