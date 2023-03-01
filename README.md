@@ -101,5 +101,62 @@ The balanced accuracy score for the Easy Ensemble AdaBoost Classifier is 0.92542
 Based on the results, the Easy Ensemble AdaBoost Classifier outperformed the Balanced Random Forest Classifier in terms of the balanced accuracy score (0.925 vs. 0.787). Additionally, the Easy Ensemble AdaBoost Classifier had higher precision, recall, F1 score, and geometric mean for both high-risk and low-risk categories, indicating overall better performance. Therefore, the Easy Ensemble AdaBoost Classifier is the recommended algorithm for this imbalanced classification problem.
 
 
+## Summary:
 
+Naive Random Oversampling:
+
+* Balanced accuracy score: 0.6480723054765726
+* Precision and recall for high-risk loans were low (0.01 and 0.63, respectively)
+* Precision and recall for low-risk loans were high (1.00 and 0.66, respectively)
+
+Recommendation: While this model had a decent balanced accuracy score, the precision and recall for high-risk loans were very low, indicating that it may not be the best choice for identifying high-risk loans.
+
+SMOTE Oversampling:
+
+* Balanced accuracy score: 0.6545605858859447
+* Precision and recall for high-risk loans were low (0.01 and 0.60, respectively)
+* Precision and recall for low-risk loans were high (1.00 and 0.43, respectively)
+
+Recommendation: Similar to the Naive Random Oversampling model, this model had a decent balanced accuracy score, but the precision and recall for high-risk loans were still very low. We do not recommend using this model for identifying high-risk loans.
+
+Undersampling:
+
+* Balanced accuracy score: 0.5159904274991842
+* Precision and recall for high-risk loans were low (0.01 and 0.60, respectively)
+* Precision and recall for low-risk loans were high (1.00 and 0.43, respectively)
+
+Recommendation: The balanced accuracy score for this model was quite low, and the precision and recall for high-risk loans were still low. We do not recommend using this model for identifying high-risk loans.
+
+Combination (Over and Under) Sampling using SMOTEENN:
+
+* Balanced accuracy score: 0.6451033596415952
+* Precision and recall for high-risk loans were low (0.01 and 0.68, respectively)
+* Precision and recall for low-risk loans were high (1.00 and 0.61, respectively)
+
+Recommendation: While the balanced accuracy score was better than the previous models, the precision and recall for high-risk loans were still not optimal. We do not recommend using this model for identifying high-risk loans.
+
+Balanced Random Forest Classifier:
+
+* Balanced accuracy score: 0.7871246640962729
+* Precision and recall for high-risk loans were low (0.04 and 0.67, respectively)
+* Precision and recall for low-risk loans were high (1.00 and 0.91, respectively)
+
+Recommendation: This model had the highest balanced accuracy score of all the models, and while the precision and recall for high-risk loans were still not ideal, they were higher than the previous models. We recommend using this model for identifying high-risk loans.
+
+Easy Ensemble AdaBoost Classifier:
+
+* Balanced accuracy score: 0.925427358175101
+* Precision and recall for high-risk loans were moderate (0.07 and 0.91, respectively)
+* Precision and recall for low-risk loans were high (1.00 and 0.94, respectively)
+
+Recommendation: This model had the highest balanced accuracy score and the highest recall for high-risk loans, indicating that it is the best model for identifying high-risk loans. We strongly recommend using this model for identifying high-risk loans.
+
+
+The best-performing model in terms of balanced accuracy score and F1 score is the Easy Ensemble AdaBoost Classifier, with a balanced accuracy score of 0.925 and an F1 score of 0.97. This model also had the highest recall score for identifying high-risk loans, which is crucial in our case, as we want to minimize the number of high-risk loans that are incorrectly labeled as low-risk.
+
+However, it is important to note that all models had a relatively low precision score for identifying high-risk loans, which means that there is still a risk of incorrectly labeling low-risk loans as high-risk. This could potentially result in missed opportunities for providing loans to low-risk applicants.
+
+Additionally, we should also pay attention to the limitations of the data used to train the models. For example, there might be imbalances or biases in the data that could affect the model's performance in real-world scenarios. It is important to regularly monitor and retrain the models with updated data to ensure that they continue to perform well.
+
+In conclusion, the Easy Ensemble AdaBoost Classifier is the recommended model to use based on its high performance in identifying high-risk loans while also maintaining a high accuracy rate. However, it is important to keep in mind the limitations of the models and the data used to train them.
 
