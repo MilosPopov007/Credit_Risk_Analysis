@@ -46,6 +46,8 @@ The geometric mean, which measures the balance between recall and specificity, i
 
 Overall, the Naive Random Oversampling algorithm may not be the most effective method for this dataset, as it struggles to identify high-risk loans.
 
+![This is an image](https://github.com/MilosPopov007/Credit_Risk_Analysis/blob/main/Resources/Naive%20random%20oversampeling.png)
+
 ##### SMOTE Oversampling
 
 SMOTE (Synthetic Minority Over-sampling Technique) is an oversampling algorithm that generates synthetic samples by randomly selecting a minority class instance and using its k-nearest neighbors to create similar, but slightly different, new instances. This technique is commonly used to address class imbalance in datasets. By generating synthetic samples, SMOTE is able to balance the class distribution while avoiding overfitting.
@@ -60,6 +62,8 @@ True Negative (TN) = 11306: The model correctly predicted that 11306 loans are l
 
 Compared to the Naive Random Oversampling, the SMOTE Oversampling technique yielded slightly lower balanced accuracy score of 0.646. The confusion matrix shows that SMOTE correctly classified 11306 low risk loans and 55 high risk loans. However, it misclassified 32 high risk loans and 5812 low risk loans. The imbalanced classification report shows that the precision score for high risk loans is still low at 0.01, but the recall score improved to 0.63. The precision score for low risk loans is still high at 1.00, but the recall score decreased slightly to 0.66. Overall, the SMOTE Oversampling technique did not significantly improve the classification performance compared to the Naive Random Oversampling.
 
+![This is an image](https://github.com/MilosPopov007/Credit_Risk_Analysis/blob/main/Resources/SMOTE.png)
+
 #### Undersampling
 
 Undersampling is a technique that reduces the size of the majority class by randomly selecting a subset of the data points. This can help to balance the class distribution and improve model performance.
@@ -72,6 +76,8 @@ The balanced accuracy score for the Undersampling algorithm is the lowest among 
 
 The imbalanced classification report shows that the precision for high-risk loans is only 0.01, indicating that when the model predicts a loan is high-risk, it is only correct 1% of the time. The recall is 0.60, meaning that the model only correctly identified 60% of the actual high-risk loans. The average f1 score is also low at 0.60, indicating that this algorithm has poor overall performance. Therefore, we should consider using another algorithm to better predict high-risk loans.
 
+![This is an image](https://github.com/MilosPopov007/Credit_Risk_Analysis/blob/main/Resources/undersampeling.png)
+
 #### Combination (Over and Under) Sampling using the SMOTEENN algorithm to Predict Credit Risk
 
 Combination Sampling is a hybrid approach that combines both Over and Under Sampling methods to address the imbalanced classification problem. The SMOTEENN algorithm uses SMOTE to oversample the minority class and Edited Nearest Neighbors (ENN) to undersample the majority class. The combination of these two techniques can improve the overall performance of the classification model by reducing both the overfitting and underfitting problems.
@@ -79,6 +85,8 @@ Combination Sampling is a hybrid approach that combines both Over and Under Samp
 The balanced accuracy score for the Combination (Over and Under) Sampling using the SMOTEENN algorithm is 0.6451033596415952
 
 Compared to the results from the previous sampling methods, the combination sampling using the SMOTEENN algorithm shows a slightly lower balanced accuracy score of 0.6451. However, the precision and recall scores for detecting high-risk loans have improved compared to the other sampling methods, with a precision score of 0.01 and recall score of 0.68. The precision score for low-risk loans is 1.00, indicating that all of the predicted low-risk loans were correct. However, the recall score for low-risk loans is lower than the previous sampling methods at 0.61, indicating that there are more false negatives. Overall, the combination sampling method has its advantages and disadvantages and may be suitable depending on the specific needs of the analysis.
+
+![This is an image](https://github.com/MilosPopov007/Credit_Risk_Analysis/blob/main/Resources/combination.png)
 
 ### [Use of Ensemble Classifiers to Predict Credit Risk](https://github.com/MilosPopov007/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)
 
@@ -92,6 +100,8 @@ The Balanced Random Forest Classifier is an ensemble learning method that uses a
  
 The Balanced Random Forest Classifier performed better than all the previous models. It has a high balanced accuracy score of 0.7871, indicating that it is able to effectively classify both high-risk and low-risk loans. The recall score for high-risk loans is also the highest among all the models, although still relatively low at 0.67. The precision score for high-risk loans is low at 0.04, indicating that there are still a high number of false positives. However, the F1 score for high-risk loans has improved compared to the previous models.
 
+![This is an image](https://github.com/MilosPopov007/Credit_Risk_Analysis/blob/main/Resources/balance%20random.png)
+
 #### Easy Ensemble AdaBoost Classifier
 
 The Easy Ensemble AdaBoost Classifier is an ensemble method that combines multiple weak learners to make more accurate predictions. In this algorithm, the weak learners are decision trees that are sequentially trained to correct the mistakes made by the previous tree. This approach creates a strong classifier that can better handle imbalanced datasets. The Easy Ensemble method takes this a step further by undersampling the majority class and boosting the minority class, which helps to further balance the dataset and improve model performance.
@@ -99,6 +109,8 @@ The Easy Ensemble AdaBoost Classifier is an ensemble method that combines multip
 The balanced accuracy score for the Easy Ensemble AdaBoost Classifier is 0.925427358175101. This indicates that the model performs well in predicting both classes, with a high degree of accuracy.
 
 Based on the results, the Easy Ensemble AdaBoost Classifier outperformed the Balanced Random Forest Classifier in terms of the balanced accuracy score (0.925 vs. 0.787). Additionally, the Easy Ensemble AdaBoost Classifier had higher precision, recall, F1 score, and geometric mean for both high-risk and low-risk categories, indicating overall better performance. Therefore, the Easy Ensemble AdaBoost Classifier is the recommended algorithm for this imbalanced classification problem.
+
+![This is an image](https://github.com/MilosPopov007/Credit_Risk_Analysis/blob/main/Resources/ada%20boost.png)
 
 
 ## Summary:
