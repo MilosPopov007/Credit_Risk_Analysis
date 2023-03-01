@@ -60,7 +60,7 @@ True Negative (TN) = 11306: The model correctly predicted that 11306 loans are l
 
 Compared to the Naive Random Oversampling, the SMOTE Oversampling technique yielded slightly lower balanced accuracy score of 0.646. The confusion matrix shows that SMOTE correctly classified 11306 low risk loans and 55 high risk loans. However, it misclassified 32 high risk loans and 5812 low risk loans. The imbalanced classification report shows that the precision score for high risk loans is still low at 0.01, but the recall score improved to 0.63. The precision score for low risk loans is still high at 1.00, but the recall score decreased slightly to 0.66. Overall, the SMOTE Oversampling technique did not significantly improve the classification performance compared to the Naive Random Oversampling.
 
-##### Undersampling
+#### Undersampling
 
 Undersampling is a technique that reduces the size of the majority class by randomly selecting a subset of the data points. This can help to balance the class distribution and improve model performance.
 
@@ -72,3 +72,10 @@ The balanced accuracy score for the Undersampling algorithm is the lowest among 
 
 The imbalanced classification report shows that the precision for high-risk loans is only 0.01, indicating that when the model predicts a loan is high-risk, it is only correct 1% of the time. The recall is 0.60, meaning that the model only correctly identified 60% of the actual high-risk loans. The average f1 score is also low at 0.60, indicating that this algorithm has poor overall performance. Therefore, we should consider using another algorithm to better predict high-risk loans.
 
+#### Combination (Over and Under) Sampling using the SMOTEENN algorithm to Predict Credit Risk
+
+Combination Sampling is a hybrid approach that combines both Over and Under Sampling methods to address the imbalanced classification problem. The SMOTEENN algorithm uses SMOTE to oversample the minority class and Edited Nearest Neighbors (ENN) to undersample the majority class. The combination of these two techniques can improve the overall performance of the classification model by reducing both the overfitting and underfitting problems.
+
+The balanced accuracy score for the Combination (Over and Under) Sampling using the SMOTEENN algorithm is 0.6451033596415952
+
+Compared to the results from the previous sampling methods, the combination sampling using the SMOTEENN algorithm shows a slightly lower balanced accuracy score of 0.6451. However, the precision and recall scores for detecting high-risk loans have improved compared to the other sampling methods, with a precision score of 0.01 and recall score of 0.68. The precision score for low-risk loans is 1.00, indicating that all of the predicted low-risk loans were correct. However, the recall score for low-risk loans is lower than the previous sampling methods at 0.61, indicating that there are more false negatives. Overall, the combination sampling method has its advantages and disadvantages and may be suitable depending on the specific needs of the analysis.
