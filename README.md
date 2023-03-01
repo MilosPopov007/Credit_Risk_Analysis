@@ -80,7 +80,7 @@ The balanced accuracy score for the Combination (Over and Under) Sampling using 
 
 Compared to the results from the previous sampling methods, the combination sampling using the SMOTEENN algorithm shows a slightly lower balanced accuracy score of 0.6451. However, the precision and recall scores for detecting high-risk loans have improved compared to the other sampling methods, with a precision score of 0.01 and recall score of 0.68. The precision score for low-risk loans is 1.00, indicating that all of the predicted low-risk loans were correct. However, the recall score for low-risk loans is lower than the previous sampling methods at 0.61, indicating that there are more false negatives. Overall, the combination sampling method has its advantages and disadvantages and may be suitable depending on the specific needs of the analysis.
 
-### Use of Ensemble Classifiers to Predict Credit Risk
+### [Use of Ensemble Classifiers to Predict Credit Risk](https://github.com/MilosPopov007/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)
 
 Using the Imblearn.ensemble library, we will train and compare two different ensemble classifiers, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk and evaluate each model. We will repeat the steps created in previous models, but this time I will be using using BalancedRandomForestClassifier and EasyEnsembleClassifier.
 
