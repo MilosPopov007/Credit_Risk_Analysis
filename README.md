@@ -90,7 +90,7 @@ Compared to the results from the previous sampling methods, the combination samp
 
 ### [Use of Ensemble Classifiers to Predict Credit Risk](https://github.com/MilosPopov007/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)
 
-Using the Imblearn.ensemble library, we will train and compare two different ensemble classifiers, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk and evaluate each model. We will repeat the steps created in previous models, but this time I will be using using BalancedRandomForestClassifier and EasyEnsembleClassifier.
+Using the Imblearn.ensemble library, we will train and compare two different ensemble classifiers, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk and evaluate each model. We will repeat the steps created in previous models, but this time I will be using BalancedRandomForestClassifier and EasyEnsembleClassifier.
 
 #### Balanced Random Forest Classifier 
 
