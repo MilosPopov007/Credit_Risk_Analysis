@@ -170,5 +170,5 @@ However, it is important to note that all models had a relatively low precision 
 
 Additionally, we should also pay attention to the limitations of the data used to train the models. For example, there might be imbalances or biases in the data that could affect the model's performance in real-world scenarios. It is important to regularly monitor and retrain the models with updated data to ensure that they continue to perform well.
 
-In conclusion, the Easy Ensemble AdaBoost Classifier is the recommended model to use based on its high performance in identifying high-risk loans while also maintaining a high accuracy rate. However, it is important to keep in mind the limitations of the models and the data used to train them.
+The Easy Ensemble AdaBoost Classifier is the recommended model to use based on its high performance in identifying high-risk loans while also maintaining a high accuracy rate, however it is important to keep in mind the limitations of the models and the data used to train them.
 
